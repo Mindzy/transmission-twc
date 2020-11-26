@@ -18,7 +18,5 @@ ENV TZ=Asia/Shanghai
 ENV GUID=0
 ENV PUID=0
 
-COPY /root/ /
-
 EXPOSE 9091 51413
 VOLUME /config /downloads /watch
