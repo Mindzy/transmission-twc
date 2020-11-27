@@ -2,10 +2,9 @@ FROM docker.io/linuxserver/transmission:latest
 
 LABEL maintainer="Mindzy"
 
-ENV WEBUI_VERSION=v1.6.1-update1
-
 RUN apk add --no-cache \
     curl && \
+    WEBUI_VERSION=$(curl https://github.com/ronggang/transmission-web-control/releases/latest | cut -d'"' -f 2 | cut -d'/' -f 8) && \
     curl -fSL https://github.com/ronggang/transmission-web-control/archive/${WEBUI_VERSION}.zip -o twc.zip && \
     unzip twc.zip -d /tmp && \
     mv -f /usr/share/transmission/web/index.html /usr/share/transmission/web/index.original.html && \
