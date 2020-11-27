@@ -1,4 +1,4 @@
-FROM　linuxserver/transmission:latest
+FROM　docker.io/linuxserver/transmission:latest
 
 LABEL maintainer="Mindzy"
 
