@@ -7,8 +7,8 @@ services:
     restart: always
     volumes:
       - /volume1/Downloads:/downloads
-      - /volume2/Videos/Movies:/downloads/movies
-      - /volume2/Videos/TV:/downloads/tv
+      - /volume2/Videos/Movies:/movies
+      - /volume2/Videos/TV:/tv
       - /volume1/docker/twc-config:/config
       - /volume1/Downloads/twc-torrents:/watch
     environment:
