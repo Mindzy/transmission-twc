@@ -13,7 +13,7 @@ services:
       - /volume1/Downloads/twc-torrents:/watch
     environment:
       - TZ=Asia/Shanghai
-      - GUID=101
+      - PGID=101
       - PUID=1026
     labels:
       - com.centurylinklabs.watchtower.enable=true
