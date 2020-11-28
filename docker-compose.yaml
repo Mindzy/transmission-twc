@@ -1,0 +1,19 @@
+version: '3'
+services:
+  transmission:
+    image: mindzy/transmission-twc:latest
+    container_name: transmission
+    network_mode: host
+    restart: always
+    volumes:
+      - /volume1/Downloads:/downloads
+      - /volume2/Videos/Movies:/downloads/movies
+      - /volume2/Videos/TV:/downloads/tv
+      - /volume1/docker/twc-config:/config
+      - /volume1/Downloads/twc-torrents:/watch
+    environment:
+      - TZ=Asia/Shanghai
+      - GUID=101
+      - PUID=1026
+    labels:
+      - com.centurylinklabs.watchtower.enable=true
