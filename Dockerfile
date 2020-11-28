@@ -13,7 +13,7 @@ RUN apk add --no-cache \
     apk del curl
 
 ENV TZ=Asia/Shanghai
-ENV GUID=0
+ENV PGID=0
 ENV PUID=0
 
 EXPOSE 9091 51413
