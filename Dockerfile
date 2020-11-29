@@ -1,4 +1,4 @@
-FROM docker.io/linuxserver/transmission:latest
+FROM docker.io/linuxserver/transmission:2.94-r3-ls53
 
 LABEL maintainer="Mindzy"
 
